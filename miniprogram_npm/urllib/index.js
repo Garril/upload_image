@@ -4,7 +4,7 @@ var __DEFINE__ = function(modId, func, req) { var m = { exports: {}, _tempexport
 var __REQUIRE__ = function(modId, source) { if(!__MODS__[modId]) return require(source); if(!__MODS__[modId].status) { var m = __MODS__[modId].m; m._exports = m._tempexports; var desp = Object.getOwnPropertyDescriptor(m, "exports"); if (desp && desp.configurable) Object.defineProperty(m, "exports", { set: function (val) { if(typeof val === "object" && val !== m._exports) { m._exports.__proto__ = val.__proto__; Object.keys(val).forEach(function (k) { m._exports[k] = val[k]; }); } m._tempexports = val }, get: function () { return m._tempexports; } }); __MODS__[modId].status = 1; __MODS__[modId].func(__MODS__[modId].req, m, m.exports); } return __MODS__[modId].m.exports; };
 var __REQUIRE_WILDCARD__ = function(obj) { if(obj && obj.__esModule) { return obj; } else { var newObj = {}; if(obj != null) { for(var k in obj) { if (Object.prototype.hasOwnProperty.call(obj, k)) newObj[k] = obj[k]; } } newObj.default = obj; return newObj; } };
 var __REQUIRE_DEFAULT__ = function(obj) { return obj && obj.__esModule ? obj.default : obj; };
-__DEFINE__(1681401090190, function(require, module, exports) {
+__DEFINE__(1681529022367, function(require, module, exports) {
 
 
 var urllib = require('./urllib');
@@ -27,8 +27,8 @@ exports.create = function (options) {
   return new exports.HttpClient(options);
 };
 
-}, function(modId) {var map = {"./urllib":1681401090191,"./httpclient":1681401090195,"./httpclient2":1681401090196}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401090191, function(require, module, exports) {
+}, function(modId) {var map = {"./urllib":1681529022368,"./httpclient":1681529022372,"./httpclient2":1681529022373}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022368, function(require, module, exports) {
 
 
 var debug = require('debug')('urllib');
@@ -1347,8 +1347,8 @@ function getSocketTimeout(socket) {
   return socket.timeout || socket._idleTimeout;
 }
 
-}, function(modId) { var map = {"./detect_proxy_agent":1681401090192,"../package.json":1681401090194}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401090192, function(require, module, exports) {
+}, function(modId) { var map = {"./detect_proxy_agent":1681529022369,"../package.json":1681529022371}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022369, function(require, module, exports) {
 
 
 var debug = require('debug')('urllib:detect_proxy_agent');
@@ -1381,8 +1381,8 @@ function detectProxyAgent(uri, args) {
 module.exports = detectProxyAgent;
 module.exports.proxyAgents = proxyAgents;
 
-}, function(modId) { var map = {"./get_proxy_from_uri":1681401090193}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401090193, function(require, module, exports) {
+}, function(modId) { var map = {"./get_proxy_from_uri":1681529022370}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022370, function(require, module, exports) {
 // copy from https://github.com/request/request/blob/90cf8c743bb9fd6a4cb683a56fb7844c6b316866/lib/getProxyFromURI.js
 
 
@@ -1466,7 +1466,7 @@ function getProxyFromURI(uri) {
 module.exports = getProxyFromURI
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401090194, function(require, module, exports) {
+__DEFINE__(1681529022371, function(require, module, exports) {
 module.exports = {
   "name": "urllib",
   "version": "2.40.0",
@@ -1563,7 +1563,7 @@ module.exports = {
 }
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401090195, function(require, module, exports) {
+__DEFINE__(1681529022372, function(require, module, exports) {
 
 
 var EventEmitter = require('events').EventEmitter;
@@ -1626,8 +1626,8 @@ function getAgent(agent, defaultAgent) {
   return agent === undefined ? defaultAgent : agent;
 }
 
-}, function(modId) { var map = {"./urllib":1681401090191}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401090196, function(require, module, exports) {
+}, function(modId) { var map = {"./urllib":1681529022368}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022373, function(require, module, exports) {
 
 
 var util = require('util');
@@ -1712,8 +1712,8 @@ function sleep(ms) {
   });
 }
 
-}, function(modId) { var map = {"./httpclient":1681401090195}; return __REQUIRE__(map[modId], modId); })
-return __REQUIRE__(1681401090190);
+}, function(modId) { var map = {"./httpclient":1681529022372}; return __REQUIRE__(map[modId], modId); })
+return __REQUIRE__(1681529022367);
 })()
 //miniprogram-npm-outsideDeps=["debug","path","dns","http","https","url","util","qs","ip","querystring","zlib","default-user-agent","digest-header","humanize-ms","statuses","content-type","ee-first","pump","utility","formstream","any-promise","constants","iconv-lite","proxy-agent","events"]
 //# sourceMappingURL=index.js.map

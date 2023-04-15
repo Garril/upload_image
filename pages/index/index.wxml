@@ -1,4 +1,17 @@
 <!--index.wxml-->
 <view class="container">
-  <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" bind:delete="deleteImg" multiple="{{true}}" />
+  <view class="upload-wrapper">
+    <view wx:if="{{imgList.length === 0}}" class="box-container">
+      <view class="box" style="border-right: 1px dashed rgb(243, 226, 226);;border-bottom: 1px dashed rgb(243, 226, 226);;"></view>
+      <view class="box" style="border-bottom: 1px dashed rgb(243, 226, 226);;"></view>
+      <view class="box" style="border-right: 1px dashed rgb(243, 226, 226);"></view>
+      <view class="box"></view>
+    </view>
+    <view wx:else>
+      <view wx:for="{{imgList}}" wx:key="index">
+        <image class="upload-img" src="{{item}}"/>
+      </view>
+    </view>
+  </view>
+  <button class="btn" bindtap="chooseAndUpload">上传图片处理</button>
 </view>

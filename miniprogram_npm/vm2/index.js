@@ -4,13 +4,13 @@ var __DEFINE__ = function(modId, func, req) { var m = { exports: {}, _tempexport
 var __REQUIRE__ = function(modId, source) { if(!__MODS__[modId]) return require(source); if(!__MODS__[modId].status) { var m = __MODS__[modId].m; m._exports = m._tempexports; var desp = Object.getOwnPropertyDescriptor(m, "exports"); if (desp && desp.configurable) Object.defineProperty(m, "exports", { set: function (val) { if(typeof val === "object" && val !== m._exports) { m._exports.__proto__ = val.__proto__; Object.keys(val).forEach(function (k) { m._exports[k] = val[k]; }); } m._tempexports = val }, get: function () { return m._tempexports; } }); __MODS__[modId].status = 1; __MODS__[modId].func(__MODS__[modId].req, m, m.exports); } return __MODS__[modId].m.exports; };
 var __REQUIRE_WILDCARD__ = function(obj) { if(obj && obj.__esModule) { return obj; } else { var newObj = {}; if(obj != null) { for(var k in obj) { if (Object.prototype.hasOwnProperty.call(obj, k)) newObj[k] = obj[k]; } } newObj.default = obj; return newObj; } };
 var __REQUIRE_DEFAULT__ = function(obj) { return obj && obj.__esModule ? obj.default : obj; };
-__DEFINE__(1681401090210, function(require, module, exports) {
+__DEFINE__(1681529022387, function(require, module, exports) {
 if (parseInt(process.versions.node.split('.')[0]) < 6) throw new Error('vm2 requires Node.js version 6 or newer.');
 
 module.exports = require('./lib/main');
 
-}, function(modId) {var map = {"./lib/main":1681401090211}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401090211, function(require, module, exports) {
+}, function(modId) {var map = {"./lib/main":1681529022388}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022388, function(require, module, exports) {
 
 
 const {
@@ -35,8 +35,8 @@ exports.NodeVM = NodeVM;
 exports.VM = VM;
 exports.VMFileSystem = VMFileSystem;
 
-}, function(modId) { var map = {"./bridge":1681401090212,"./script":1681401090213,"./vm":1681401090214,"./nodevm":1681401090218,"./filesystem":1681401090221}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401090212, function(require, module, exports) {
+}, function(modId) { var map = {"./bridge":1681529022389,"./script":1681529022390,"./vm":1681529022391,"./nodevm":1681529022395,"./filesystem":1681529022398}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022389, function(require, module, exports) {
 
 
 /**
@@ -1049,7 +1049,7 @@ exports.createBridge = createBridge;
 exports.VMError = VMError;
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401090213, function(require, module, exports) {
+__DEFINE__(1681529022390, function(require, module, exports) {
 
 
 const {Script} = require('vm');
@@ -1439,8 +1439,8 @@ exports.STRICT_MODULE_PREFIX = STRICT_MODULE_PREFIX;
 exports.MODULE_SUFFIX = MODULE_SUFFIX;
 exports.VMScript = VMScript;
 
-}, function(modId) { var map = {"vm":1681401090214,"./compiler":1681401090217,"./transformer":1681401090216}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401090214, function(require, module, exports) {
+}, function(modId) { var map = {"vm":1681529022391,"./compiler":1681529022394,"./transformer":1681529022393}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022391, function(require, module, exports) {
 
 
 /**
@@ -1981,8 +1981,8 @@ class VM extends EventEmitter {
 
 exports.VM = VM;
 
-}, function(modId) { var map = {"vm":1681401090214,"events":1681401090215,"./bridge":1681401090212,"./transformer":1681401090216,"./compiler":1681401090217,"./script":1681401090213}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401090215, function(require, module, exports) {
+}, function(modId) { var map = {"vm":1681529022391,"events":1681529022392,"./bridge":1681529022389,"./transformer":1681529022393,"./compiler":1681529022394,"./script":1681529022390}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022392, function(require, module, exports) {
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -2962,7 +2962,7 @@ function unwrapListeners(arr) {
 }
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401090216, function(require, module, exports) {
+__DEFINE__(1681529022393, function(require, module, exports) {
 
 const {Parser: AcornParser, isNewLine: acornIsNewLine, getLineInfo: acornGetLineInfo} = require('acorn');
 const {full: acornWalkFull} = require('acorn-walk');
@@ -3163,7 +3163,7 @@ exports.INTERNAL_STATE_NAME = INTERNAL_STATE_NAME;
 exports.transformer = transformer;
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401090217, function(require, module, exports) {
+__DEFINE__(1681529022394, function(require, module, exports) {
 
 
 const {
@@ -3252,8 +3252,8 @@ function lookupCompiler(compiler) {
 exports.removeShebang = removeShebang;
 exports.lookupCompiler = lookupCompiler;
 
-}, function(modId) { var map = {"./bridge":1681401090212}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401090218, function(require, module, exports) {
+}, function(modId) { var map = {"./bridge":1681529022389}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022395, function(require, module, exports) {
 
 
 /**
@@ -3759,8 +3759,8 @@ function vm2NestingLoader(resolver, vm, id) {
 
 exports.NodeVM = NodeVM;
 
-}, function(modId) { var map = {"vm":1681401090214,"./bridge":1681401090212,"./script":1681401090213,"./transformer":1681401090216,"./vm":1681401090214,"./resolver-compat":1681401090219}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401090219, function(require, module, exports) {
+}, function(modId) { var map = {"vm":1681529022391,"./bridge":1681529022389,"./script":1681529022390,"./transformer":1681529022393,"./vm":1681529022391,"./resolver-compat":1681529022396}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022396, function(require, module, exports) {
 
 
 // Translate the old options to the new Resolver functionality.
@@ -4112,8 +4112,8 @@ function resolverFromOptions(vm, options, override, compiler) {
 
 exports.resolverFromOptions = resolverFromOptions;
 
-}, function(modId) { var map = {"events":1681401090215,"./resolver":1681401090220,"./script":1681401090213,"./vm":1681401090214,"./bridge":1681401090212,"./filesystem":1681401090221}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401090220, function(require, module, exports) {
+}, function(modId) { var map = {"events":1681529022392,"./resolver":1681529022397,"./script":1681529022390,"./vm":1681529022391,"./bridge":1681529022389,"./filesystem":1681529022398}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022397, function(require, module, exports) {
 
 
 // The Resolver is currently experimental and might be exposed to users in the future.
@@ -4996,8 +4996,8 @@ class DefaultResolver extends Resolver {
 exports.Resolver = Resolver;
 exports.DefaultResolver = DefaultResolver;
 
-}, function(modId) { var map = {"./bridge":1681401090212,"./script":1681401090213}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401090221, function(require, module, exports) {
+}, function(modId) { var map = {"./bridge":1681529022389,"./script":1681529022390}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022398, function(require, module, exports) {
 
 
 const pa = require('path');
@@ -5084,7 +5084,7 @@ exports.DefaultFileSystem = DefaultFileSystem;
 exports.VMFileSystem = VMFileSystem;
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-return __REQUIRE__(1681401090210);
+return __REQUIRE__(1681529022387);
 })()
 //miniprogram-npm-outsideDeps=["fs","path","buffer","acorn","acorn-walk","coffee-script","module","util","async_hooks"]
 //# sourceMappingURL=index.js.map

@@ -4,14 +4,14 @@ var __DEFINE__ = function(modId, func, req) { var m = { exports: {}, _tempexport
 var __REQUIRE__ = function(modId, source) { if(!__MODS__[modId]) return require(source); if(!__MODS__[modId].status) { var m = __MODS__[modId].m; m._exports = m._tempexports; var desp = Object.getOwnPropertyDescriptor(m, "exports"); if (desp && desp.configurable) Object.defineProperty(m, "exports", { set: function (val) { if(typeof val === "object" && val !== m._exports) { m._exports.__proto__ = val.__proto__; Object.keys(val).forEach(function (k) { m._exports[k] = val[k]; }); } m._tempexports = val }, get: function () { return m._tempexports; } }); __MODS__[modId].status = 1; __MODS__[modId].func(__MODS__[modId].req, m, m.exports); } return __MODS__[modId].m.exports; };
 var __REQUIRE_WILDCARD__ = function(obj) { if(obj && obj.__esModule) { return obj; } else { var newObj = {}; if(obj != null) { for(var k in obj) { if (Object.prototype.hasOwnProperty.call(obj, k)) newObj[k] = obj[k]; } } newObj.default = obj; return newObj; } };
 var __REQUIRE_DEFAULT__ = function(obj) { return obj && obj.__esModule ? obj.default : obj; };
-__DEFINE__(1681401089755, function(require, module, exports) {
+__DEFINE__(1681529021932, function(require, module, exports) {
 
 
 module.exports = require('./lib/agent');
 module.exports.HttpsAgent = require('./lib/https_agent');
 
-}, function(modId) {var map = {"./lib/agent":1681401089756,"./lib/https_agent":1681401089758}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089756, function(require, module, exports) {
+}, function(modId) {var map = {"./lib/agent":1681529021933,"./lib/https_agent":1681529021935}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021933, function(require, module, exports) {
 /**
  * refer:
  *   * @atimb "Real keep-alive HTTP agent": https://gist.github.com/2963672
@@ -146,8 +146,8 @@ function inspect(obj) {
   return res;
 }
 
-}, function(modId) { var map = {"./_http_agent":1681401089757}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089757, function(require, module, exports) {
+}, function(modId) { var map = {"./_http_agent":1681529021934}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021934, function(require, module, exports) {
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -566,7 +566,7 @@ Agent.prototype.destroy = function destroy() {
 exports.globalAgent = new Agent();
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089758, function(require, module, exports) {
+__DEFINE__(1681529021935, function(require, module, exports) {
 /**
  * Https Agent base on custom http agent
  */
@@ -610,8 +610,8 @@ class HttpsAgent extends HttpAgent {
 
 module.exports = HttpsAgent;
 
-}, function(modId) { var map = {"./agent":1681401089756}; return __REQUIRE__(map[modId], modId); })
-return __REQUIRE__(1681401089755);
+}, function(modId) { var map = {"./agent":1681529021933}; return __REQUIRE__(map[modId], modId); })
+return __REQUIRE__(1681529021932);
 })()
 //miniprogram-npm-outsideDeps=["humanize-ms","net","util","events","https"]
 //# sourceMappingURL=index.js.map

@@ -4,7 +4,7 @@ var __DEFINE__ = function(modId, func, req) { var m = { exports: {}, _tempexport
 var __REQUIRE__ = function(modId, source) { if(!__MODS__[modId]) return require(source); if(!__MODS__[modId].status) { var m = __MODS__[modId].m; m._exports = m._tempexports; var desp = Object.getOwnPropertyDescriptor(m, "exports"); if (desp && desp.configurable) Object.defineProperty(m, "exports", { set: function (val) { if(typeof val === "object" && val !== m._exports) { m._exports.__proto__ = val.__proto__; Object.keys(val).forEach(function (k) { m._exports[k] = val[k]; }); } m._tempexports = val }, get: function () { return m._tempexports; } }); __MODS__[modId].status = 1; __MODS__[modId].func(__MODS__[modId].req, m, m.exports); } return __MODS__[modId].m.exports; };
 var __REQUIRE_WILDCARD__ = function(obj) { if(obj && obj.__esModule) { return obj; } else { var newObj = {}; if(obj != null) { for(var k in obj) { if (Object.prototype.hasOwnProperty.call(obj, k)) newObj[k] = obj[k]; } } newObj.default = obj; return newObj; } };
 var __REQUIRE_DEFAULT__ = function(obj) { return obj && obj.__esModule ? obj.default : obj; };
-__DEFINE__(1681401090153, function(require, module, exports) {
+__DEFINE__(1681529022330, function(require, module, exports) {
 
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -23,8 +23,8 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./client/socksclient"), exports);
 //# sourceMappingURL=index.js.map
-}, function(modId) {var map = {"./client/socksclient":1681401090154}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401090154, function(require, module, exports) {
+}, function(modId) {var map = {"./client/socksclient":1681529022331}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022331, function(require, module, exports) {
 
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -818,8 +818,8 @@ class SocksClient extends events_1.EventEmitter {
 }
 exports.SocksClient = SocksClient;
 //# sourceMappingURL=socksclient.js.map
-}, function(modId) { var map = {"../common/constants":1681401090155,"../common/helpers":1681401090156,"../common/receivebuffer":1681401090158,"../common/util":1681401090157}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401090155, function(require, module, exports) {
+}, function(modId) { var map = {"../common/constants":1681529022332,"../common/helpers":1681529022333,"../common/receivebuffer":1681529022335,"../common/util":1681529022334}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022332, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SOCKS5_NO_ACCEPTABLE_AUTH = exports.SOCKS5_CUSTOM_AUTH_END = exports.SOCKS5_CUSTOM_AUTH_START = exports.SOCKS_INCOMING_PACKET_SIZES = exports.SocksClientState = exports.Socks5Response = exports.Socks5HostType = exports.Socks5Auth = exports.Socks4Response = exports.SocksCommand = exports.ERRORS = exports.DEFAULT_TIMEOUT = void 0;
@@ -935,7 +935,7 @@ var SocksClientState;
 exports.SocksClientState = SocksClientState;
 //# sourceMappingURL=constants.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401090156, function(require, module, exports) {
+__DEFINE__(1681529022333, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.validateSocksClientChainOptions = exports.validateSocksClientOptions = void 0;
@@ -1064,8 +1064,8 @@ function isValidTimeoutValue(value) {
     return typeof value === 'number' && value > 0;
 }
 //# sourceMappingURL=helpers.js.map
-}, function(modId) { var map = {"./util":1681401090157,"./constants":1681401090155}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401090157, function(require, module, exports) {
+}, function(modId) { var map = {"./util":1681529022334,"./constants":1681529022332}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022334, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.shuffleArray = exports.SocksClientError = void 0;
@@ -1092,7 +1092,7 @@ function shuffleArray(array) {
 exports.shuffleArray = shuffleArray;
 //# sourceMappingURL=util.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401090158, function(require, module, exports) {
+__DEFINE__(1681529022335, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ReceiveBuffer = void 0;
@@ -1137,7 +1137,7 @@ class ReceiveBuffer {
 exports.ReceiveBuffer = ReceiveBuffer;
 //# sourceMappingURL=receivebuffer.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-return __REQUIRE__(1681401090153);
+return __REQUIRE__(1681529022330);
 })()
 //miniprogram-npm-outsideDeps=["events","net","ip","smart-buffer","stream"]
 //# sourceMappingURL=index.js.map

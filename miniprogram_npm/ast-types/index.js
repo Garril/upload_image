@@ -4,7 +4,7 @@ var __DEFINE__ = function(modId, func, req) { var m = { exports: {}, _tempexport
 var __REQUIRE__ = function(modId, source) { if(!__MODS__[modId]) return require(source); if(!__MODS__[modId].status) { var m = __MODS__[modId].m; m._exports = m._tempexports; var desp = Object.getOwnPropertyDescriptor(m, "exports"); if (desp && desp.configurable) Object.defineProperty(m, "exports", { set: function (val) { if(typeof val === "object" && val !== m._exports) { m._exports.__proto__ = val.__proto__; Object.keys(val).forEach(function (k) { m._exports[k] = val[k]; }); } m._tempexports = val }, get: function () { return m._tempexports; } }); __MODS__[modId].status = 1; __MODS__[modId].func(__MODS__[modId].req, m, m.exports); } return __MODS__[modId].m.exports; };
 var __REQUIRE_WILDCARD__ = function(obj) { if(obj && obj.__esModule) { return obj; } else { var newObj = {}; if(obj != null) { for(var k in obj) { if (Object.prototype.hasOwnProperty.call(obj, k)) newObj[k] = obj[k]; } } newObj.default = obj; return newObj; } };
 var __REQUIRE_DEFAULT__ = function(obj) { return obj && obj.__esModule ? obj.default : obj; };
-__DEFINE__(1681401089856, function(require, module, exports) {
+__DEFINE__(1681529022033, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.visit = exports.use = exports.Type = exports.someField = exports.PathVisitor = exports.Path = exports.NodePath = exports.namedTypes = exports.getSupertypeNames = exports.getFieldValue = exports.getFieldNames = exports.getBuilderName = exports.finalize = exports.eachField = exports.defineMethod = exports.builtInTypes = exports.builders = exports.astNodesAreEquivalent = void 0;
@@ -59,8 +59,8 @@ exports.visit = visit;
 // retaining its member types.
 Object.assign(namedTypes_1.namedTypes, n);
 
-}, function(modId) {var map = {"./fork":1681401089857,"./def/core":1681401089864,"./def/es6":1681401089866,"./def/es7":1681401089867,"./def/es2020":1681401089868,"./def/jsx":1681401089869,"./def/flow":1681401089870,"./def/esprima":1681401089872,"./def/babel":1681401089873,"./def/typescript":1681401089875,"./def/es-proposals":1681401089876,"./gen/namedTypes":1681401089877}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089857, function(require, module, exports) {
+}, function(modId) {var map = {"./fork":1681529022034,"./def/core":1681529022041,"./def/es6":1681529022043,"./def/es7":1681529022044,"./def/es2020":1681529022045,"./def/jsx":1681529022046,"./def/flow":1681529022047,"./def/esprima":1681529022049,"./def/babel":1681529022050,"./def/typescript":1681529022052,"./def/es-proposals":1681529022053,"./gen/namedTypes":1681529022054}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022034, function(require, module, exports) {
 ;
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
@@ -114,8 +114,8 @@ function createFork() {
 }
 module.exports = exports["default"];
 
-}, function(modId) { var map = {"./lib/types":1681401089858,"./lib/path-visitor":1681401089859,"./lib/equiv":1681401089863,"./lib/path":1681401089861,"./lib/node-path":1681401089860}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089858, function(require, module, exports) {
+}, function(modId) { var map = {"./lib/types":1681529022035,"./lib/path-visitor":1681529022036,"./lib/equiv":1681529022040,"./lib/path":1681529022038,"./lib/node-path":1681529022037}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022035, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Def = void 0;
@@ -898,7 +898,7 @@ exports.default = typesPlugin;
 ;
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089859, function(require, module, exports) {
+__DEFINE__(1681529022036, function(require, module, exports) {
 ;
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
@@ -1243,8 +1243,8 @@ function pathVisitorPlugin(fork) {
 exports.default = pathVisitorPlugin;
 module.exports = exports["default"];
 
-}, function(modId) { var map = {"./types":1681401089858,"./node-path":1681401089860}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089860, function(require, module, exports) {
+}, function(modId) { var map = {"./types":1681529022035,"./node-path":1681529022037}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022037, function(require, module, exports) {
 ;
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
@@ -1657,8 +1657,8 @@ function nodePathPlugin(fork) {
 exports.default = nodePathPlugin;
 module.exports = exports["default"];
 
-}, function(modId) { var map = {"./types":1681401089858,"./path":1681401089861,"./scope":1681401089862}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089861, function(require, module, exports) {
+}, function(modId) { var map = {"./types":1681529022035,"./path":1681529022038,"./scope":1681529022039}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022038, function(require, module, exports) {
 ;
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
@@ -1991,8 +1991,8 @@ function pathPlugin(fork) {
 exports.default = pathPlugin;
 module.exports = exports["default"];
 
-}, function(modId) { var map = {"./types":1681401089858}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089862, function(require, module, exports) {
+}, function(modId) { var map = {"./types":1681529022035}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022039, function(require, module, exports) {
 ;
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
@@ -2312,8 +2312,8 @@ function scopePlugin(fork) {
 exports.default = scopePlugin;
 module.exports = exports["default"];
 
-}, function(modId) { var map = {"./types":1681401089858}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089863, function(require, module, exports) {
+}, function(modId) { var map = {"./types":1681529022035}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022040, function(require, module, exports) {
 ;
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
@@ -2469,8 +2469,8 @@ function default_1(fork) {
 exports.default = default_1;
 module.exports = exports["default"];
 
-}, function(modId) { var map = {"./types":1681401089858}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089864, function(require, module, exports) {
+}, function(modId) { var map = {"./types":1681529022035}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022041, function(require, module, exports) {
 ;
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
@@ -2770,8 +2770,8 @@ function default_1(fork) {
 exports.default = default_1;
 module.exports = exports["default"];
 
-}, function(modId) { var map = {"../lib/types":1681401089858,"../lib/shared":1681401089865}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089865, function(require, module, exports) {
+}, function(modId) { var map = {"../lib/types":1681529022035,"../lib/shared":1681529022042}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022042, function(require, module, exports) {
 ;
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
@@ -2820,8 +2820,8 @@ function default_1(fork) {
 exports.default = default_1;
 module.exports = exports["default"];
 
-}, function(modId) { var map = {"./types":1681401089858}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089866, function(require, module, exports) {
+}, function(modId) { var map = {"./types":1681529022035}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022043, function(require, module, exports) {
 ;
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
@@ -3033,8 +3033,8 @@ function default_1(fork) {
 exports.default = default_1;
 module.exports = exports["default"];
 
-}, function(modId) { var map = {"./core":1681401089864,"../lib/types":1681401089858,"../lib/shared":1681401089865}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089867, function(require, module, exports) {
+}, function(modId) { var map = {"./core":1681529022041,"../lib/types":1681529022035,"../lib/shared":1681529022042}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022044, function(require, module, exports) {
 ;
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
@@ -3070,8 +3070,8 @@ function default_1(fork) {
 exports.default = default_1;
 module.exports = exports["default"];
 
-}, function(modId) { var map = {"./es6":1681401089866,"../lib/types":1681401089858,"../lib/shared":1681401089865}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089868, function(require, module, exports) {
+}, function(modId) { var map = {"./es6":1681529022043,"../lib/types":1681529022035,"../lib/shared":1681529022042}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022045, function(require, module, exports) {
 ;
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
@@ -3089,8 +3089,8 @@ function default_1(fork) {
 exports.default = default_1;
 module.exports = exports["default"];
 
-}, function(modId) { var map = {"./es7":1681401089867,"../lib/types":1681401089858}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089869, function(require, module, exports) {
+}, function(modId) { var map = {"./es7":1681529022044,"../lib/types":1681529022035}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022046, function(require, module, exports) {
 ;
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
@@ -3195,8 +3195,8 @@ function default_1(fork) {
 exports.default = default_1;
 module.exports = exports["default"];
 
-}, function(modId) { var map = {"./es7":1681401089867,"../lib/types":1681401089858,"../lib/shared":1681401089865}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089870, function(require, module, exports) {
+}, function(modId) { var map = {"./es7":1681529022044,"../lib/types":1681529022035,"../lib/shared":1681529022042}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022047, function(require, module, exports) {
 ;
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
@@ -3490,8 +3490,8 @@ function default_1(fork) {
 exports.default = default_1;
 module.exports = exports["default"];
 
-}, function(modId) { var map = {"./es7":1681401089867,"./type-annotations":1681401089871,"../lib/types":1681401089858,"../lib/shared":1681401089865}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089871, function(require, module, exports) {
+}, function(modId) { var map = {"./es7":1681529022044,"./type-annotations":1681529022048,"../lib/types":1681529022035,"../lib/shared":1681529022042}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022048, function(require, module, exports) {
 ;
 /**
  * Type annotation defs shared between Flow and TypeScript.
@@ -3533,8 +3533,8 @@ function default_1(fork) {
 exports.default = default_1;
 module.exports = exports["default"];
 
-}, function(modId) { var map = {"../lib/types":1681401089858,"../lib/shared":1681401089865}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089872, function(require, module, exports) {
+}, function(modId) { var map = {"../lib/types":1681529022035,"../lib/shared":1681529022042}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022049, function(require, module, exports) {
 ;
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
@@ -3585,8 +3585,8 @@ function default_1(fork) {
 exports.default = default_1;
 module.exports = exports["default"];
 
-}, function(modId) { var map = {"./es7":1681401089867,"../lib/types":1681401089858,"../lib/shared":1681401089865}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089873, function(require, module, exports) {
+}, function(modId) { var map = {"./es7":1681529022044,"../lib/types":1681529022035,"../lib/shared":1681529022042}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022050, function(require, module, exports) {
 ;
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
@@ -3599,8 +3599,8 @@ function default_1(fork) {
 exports.default = default_1;
 module.exports = exports["default"];
 
-}, function(modId) { var map = {"./babel-core":1681401089874,"./flow":1681401089870}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089874, function(require, module, exports) {
+}, function(modId) { var map = {"./babel-core":1681529022051,"./flow":1681529022047}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022051, function(require, module, exports) {
 ;
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
@@ -3858,8 +3858,8 @@ function default_1(fork) {
 exports.default = default_1;
 module.exports = exports["default"];
 
-}, function(modId) { var map = {"../lib/types":1681401089858,"../lib/shared":1681401089865,"./es7":1681401089867}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089875, function(require, module, exports) {
+}, function(modId) { var map = {"../lib/types":1681529022035,"../lib/shared":1681529022042,"./es7":1681529022044}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022052, function(require, module, exports) {
 ;
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
@@ -4205,8 +4205,8 @@ function default_1(fork) {
 exports.default = default_1;
 module.exports = exports["default"];
 
-}, function(modId) { var map = {"./babel-core":1681401089874,"./type-annotations":1681401089871,"../lib/types":1681401089858,"../lib/shared":1681401089865}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089876, function(require, module, exports) {
+}, function(modId) { var map = {"./babel-core":1681529022051,"./type-annotations":1681529022048,"../lib/types":1681529022035,"../lib/shared":1681529022042}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022053, function(require, module, exports) {
 ;
 Object.defineProperty(exports, "__esModule", { value: true });
 var tslib_1 = require("tslib");
@@ -4241,8 +4241,8 @@ function default_1(fork) {
 exports.default = default_1;
 module.exports = exports["default"];
 
-}, function(modId) { var map = {"../lib/types":1681401089858,"../lib/shared":1681401089865,"./core":1681401089864}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089877, function(require, module, exports) {
+}, function(modId) { var map = {"../lib/types":1681529022035,"../lib/shared":1681529022042,"./core":1681529022041}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022054, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.namedTypes = void 0;
@@ -4251,7 +4251,7 @@ var namedTypes;
 })(namedTypes = exports.namedTypes || (exports.namedTypes = {}));
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-return __REQUIRE__(1681401089856);
+return __REQUIRE__(1681529022033);
 })()
 //miniprogram-npm-outsideDeps=["tslib"]
 //# sourceMappingURL=index.js.map

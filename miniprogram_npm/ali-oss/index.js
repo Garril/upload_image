@@ -4,7 +4,7 @@ var __DEFINE__ = function(modId, func, req) { var m = { exports: {}, _tempexport
 var __REQUIRE__ = function(modId, source) { if(!__MODS__[modId]) return require(source); if(!__MODS__[modId].status) { var m = __MODS__[modId].m; m._exports = m._tempexports; var desp = Object.getOwnPropertyDescriptor(m, "exports"); if (desp && desp.configurable) Object.defineProperty(m, "exports", { set: function (val) { if(typeof val === "object" && val !== m._exports) { m._exports.__proto__ = val.__proto__; Object.keys(val).forEach(function (k) { m._exports[k] = val[k]; }); } m._tempexports = val }, get: function () { return m._tempexports; } }); __MODS__[modId].status = 1; __MODS__[modId].func(__MODS__[modId].req, m, m.exports); } return __MODS__[modId].m.exports; };
 var __REQUIRE_WILDCARD__ = function(obj) { if(obj && obj.__esModule) { return obj; } else { var newObj = {}; if(obj != null) { for(var k in obj) { if (Object.prototype.hasOwnProperty.call(obj, k)) newObj[k] = obj[k]; } } newObj.default = obj; return newObj; } };
 var __REQUIRE_DEFAULT__ = function(obj) { return obj && obj.__esModule ? obj.default : obj; };
-__DEFINE__(1681401089759, function(require, module, exports) {
+__DEFINE__(1681529021936, function(require, module, exports) {
 const debug = require('debug')('ali-oss');
 const sendToWormhole = require('stream-wormhole');
 const xml = require('xml2js');
@@ -393,8 +393,8 @@ proto.setSLDEnabled = function setSLDEnabled(enable) {
   return this;
 };
 
-}, function(modId) {var map = {"../package.json":1681401089760,"./common/signUtils":1681401089761,"./common/client/initOptions":1681401089764,"./common/utils/createRequest":1681401089768,"./common/utils/encoder":1681401089769,"./common/client/getReqUrl":1681401089771,"./common/utils/setSTSToken":1681401089772,"./common/utils/retry":1681401089774,"./common/utils/isFunction":1681401089775,"./common/object":1681401089776,"./object":1681401089802,"./common/image":1681401089805,"./common/bucket":1681401089807,"./bucket":1681401089843,"./managed-upload":1681401089844,"./rtmp":1681401089846,"./common/multipart-copy":1681401089847,"./common/parallel":1681401089848,"./common/multipart":1681401089849,"./image":1681401089850,"./cluster":1681401089851,"./sts":1681401089852}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089760, function(require, module, exports) {
+}, function(modId) {var map = {"../package.json":1681529021937,"./common/signUtils":1681529021938,"./common/client/initOptions":1681529021941,"./common/utils/createRequest":1681529021945,"./common/utils/encoder":1681529021946,"./common/client/getReqUrl":1681529021948,"./common/utils/setSTSToken":1681529021949,"./common/utils/retry":1681529021951,"./common/utils/isFunction":1681529021952,"./common/object":1681529021953,"./object":1681529021979,"./common/image":1681529021982,"./common/bucket":1681529021984,"./bucket":1681529022020,"./managed-upload":1681529022021,"./rtmp":1681529022023,"./common/multipart-copy":1681529022024,"./common/parallel":1681529022025,"./common/multipart":1681529022026,"./image":1681529022027,"./cluster":1681529022028,"./sts":1681529022029}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021937, function(require, module, exports) {
 module.exports = {
   "name": "ali-oss",
   "version": "6.17.1",
@@ -550,7 +550,7 @@ module.exports = {
 }
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089761, function(require, module, exports) {
+__DEFINE__(1681529021938, function(require, module, exports) {
 
 const crypto = require('crypto');
 const is = require('is-type-of');
@@ -727,8 +727,8 @@ exports._signatureForURL = function _signatureForURL(accessKeySecret, options = 
   };
 };
 
-}, function(modId) { var map = {"./utils/lowercaseKeyHeader":1681401089762}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089762, function(require, module, exports) {
+}, function(modId) { var map = {"./utils/lowercaseKeyHeader":1681529021939}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021939, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.lowercaseKeyHeader = void 0;
@@ -744,8 +744,8 @@ function lowercaseKeyHeader(headers) {
 }
 exports.lowercaseKeyHeader = lowercaseKeyHeader;
 
-}, function(modId) { var map = {"./isObject":1681401089763}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089763, function(require, module, exports) {
+}, function(modId) { var map = {"./isObject":1681529021940}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021940, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.isObject = void 0;
@@ -754,7 +754,7 @@ exports.isObject = (obj) => {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089764, function(require, module, exports) {
+__DEFINE__(1681529021941, function(require, module, exports) {
 const ms = require('humanize-ms');
 const urlutil = require('url');
 const { checkBucketName: _checkBucketName } = require('../utils/checkBucketName');
@@ -827,8 +827,8 @@ module.exports = function (options) {
   return opts;
 };
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765,"../utils/setRegion":1681401089766,"../utils/checkConfigValid":1681401089767}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089765, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942,"../utils/setRegion":1681529021943,"../utils/checkConfigValid":1681529021944}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021942, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.checkBucketName = void 0;
@@ -840,7 +840,7 @@ exports.checkBucketName = (name, createBucket = false) => {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089766, function(require, module, exports) {
+__DEFINE__(1681529021943, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -862,8 +862,8 @@ function setRegion(region, internal = false, secure = false) {
 }
 exports.setRegion = setRegion;
 
-}, function(modId) { var map = {"./checkConfigValid":1681401089767}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089767, function(require, module, exports) {
+}, function(modId) { var map = {"./checkConfigValid":1681529021944}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021944, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.checkConfigValid = void 0;
@@ -896,7 +896,7 @@ exports.checkConfigValid = (conf, key) => {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089768, function(require, module, exports) {
+__DEFINE__(1681529021945, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.createRequest = void 0;
@@ -1002,8 +1002,8 @@ function createRequest(params) {
 }
 exports.createRequest = createRequest;
 
-}, function(modId) { var map = {"./encoder":1681401089769,"./isIP":1681401089770,"./setRegion":1681401089766,"../client/getReqUrl":1681401089771}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089769, function(require, module, exports) {
+}, function(modId) { var map = {"./encoder":1681529021946,"./isIP":1681529021947,"./setRegion":1681529021943,"../client/getReqUrl":1681529021948}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021946, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.encoder = void 0;
@@ -1015,7 +1015,7 @@ function encoder(str, encoding = 'utf-8') {
 exports.encoder = encoder;
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089770, function(require, module, exports) {
+__DEFINE__(1681529021947, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.isIP = void 0;
@@ -1032,7 +1032,7 @@ exports.isIP = (host) => {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089771, function(require, module, exports) {
+__DEFINE__(1681529021948, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -1086,8 +1086,8 @@ function getReqUrl(params) {
 }
 exports.getReqUrl = getReqUrl;
 
-}, function(modId) { var map = {"../utils/isIP":1681401089770,"../utils/checkConfigValid":1681401089767}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089772, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/isIP":1681529021947,"../utils/checkConfigValid":1681529021944}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021949, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.checkCredentials = exports.setSTSToken = void 0;
@@ -1125,8 +1125,8 @@ function checkCredentials(obj) {
 }
 exports.checkCredentials = checkCredentials;
 
-}, function(modId) { var map = {"./formatObjKey":1681401089773}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089773, function(require, module, exports) {
+}, function(modId) { var map = {"./formatObjKey":1681529021950}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021950, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.formatObjKey = void 0;
@@ -1164,7 +1164,7 @@ function handelFormat(key, type, options) {
 }
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089774, function(require, module, exports) {
+__DEFINE__(1681529021951, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.retry = void 0;
@@ -1197,7 +1197,7 @@ function retry(func, retryMax, config = {}) {
 exports.retry = retry;
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089775, function(require, module, exports) {
+__DEFINE__(1681529021952, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.isFunction = void 0;
@@ -1206,7 +1206,7 @@ exports.isFunction = (v) => {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089776, function(require, module, exports) {
+__DEFINE__(1681529021953, function(require, module, exports) {
 const merge = require('merge-descriptors');
 
 const proto = exports;
@@ -1233,8 +1233,8 @@ merge(proto, require('./getObjectUrl'));
 merge(proto, require('./signatureUrl'));
 
 
-}, function(modId) { var map = {"./getSymlink":1681401089777,"./putSymlink":1681401089778,"./getObjectMeta":1681401089779,"./copyObject":1681401089780,"./calculatePostSignature":1681401089781,"./getObjectTagging":1681401089783,"./putObjectTagging":1681401089784,"./deleteObjectTagging":1681401089788,"./getBucketVersions":1681401089789,"./deleteMulti":1681401089791,"./getACL":1681401089792,"./putACL":1681401089793,"./head":1681401089794,"./delete":1681401089795,"./get":1681401089796,"./postAsyncFetch":1681401089797,"./getAsyncFetch":1681401089798,"./generateObjectUrl":1681401089799,"./getObjectUrl":1681401089800,"./signatureUrl":1681401089801}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089777, function(require, module, exports) {
+}, function(modId) { var map = {"./getSymlink":1681529021954,"./putSymlink":1681529021955,"./getObjectMeta":1681529021956,"./copyObject":1681529021957,"./calculatePostSignature":1681529021958,"./getObjectTagging":1681529021960,"./putObjectTagging":1681529021961,"./deleteObjectTagging":1681529021965,"./getBucketVersions":1681529021966,"./deleteMulti":1681529021968,"./getACL":1681529021969,"./putACL":1681529021970,"./head":1681529021971,"./delete":1681529021972,"./get":1681529021973,"./postAsyncFetch":1681529021974,"./getAsyncFetch":1681529021975,"./generateObjectUrl":1681529021976,"./getObjectUrl":1681529021977,"./signatureUrl":1681529021978}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021954, function(require, module, exports) {
 const proto = exports;
 /**
  * getSymlink
@@ -1260,7 +1260,7 @@ proto.getSymlink = async function getSymlink(name, options = {}) {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089778, function(require, module, exports) {
+__DEFINE__(1681529021955, function(require, module, exports) {
 const proto = exports;
 /**
  * putSymlink
@@ -1296,7 +1296,7 @@ proto.putSymlink = async function putSymlink(name, targetName, options) {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089779, function(require, module, exports) {
+__DEFINE__(1681529021956, function(require, module, exports) {
 const proto = exports;
 /**
  * getObjectMeta
@@ -1322,7 +1322,7 @@ proto.getObjectMeta = async function getObjectMeta(name, options) {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089780, function(require, module, exports) {
+__DEFINE__(1681529021957, function(require, module, exports) {
 const { checkBucketName: _checkBucketName } = require('../utils/checkBucketName');
 
 const proto = exports;
@@ -1398,8 +1398,8 @@ proto._getSourceName = function _getSourceName(sourceName, bucketName) {
   return sourceName;
 };
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089781, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021958, function(require, module, exports) {
 
 const { policy2Str } = require('../utils/policy2Str');
 const signHelper = require('../signUtils');
@@ -1437,8 +1437,8 @@ proto.calculatePostSignature = function calculatePostSignature(policy) {
   return query;
 };
 
-}, function(modId) { var map = {"../utils/policy2Str":1681401089782,"../signUtils":1681401089761,"../utils/isObject":1681401089763}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089782, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/policy2Str":1681529021959,"../signUtils":1681529021938,"../utils/isObject":1681529021940}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021959, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.policy2Str = void 0;
@@ -1462,7 +1462,7 @@ function policy2Str(policy) {
 exports.policy2Str = policy2Str;
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089783, function(require, module, exports) {
+__DEFINE__(1681529021960, function(require, module, exports) {
 const proto = exports;
 const { isObject } = require('../utils/isObject');
 /**
@@ -1498,8 +1498,8 @@ proto.getObjectTagging = async function getObjectTagging(name, options = {}) {
   };
 };
 
-}, function(modId) { var map = {"../utils/isObject":1681401089763}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089784, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/isObject":1681529021940}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021961, function(require, module, exports) {
 const { obj2xml } = require('../utils/obj2xml');
 const { checkObjectTag } = require('../utils/checkObjectTag');
 
@@ -1544,8 +1544,8 @@ proto.putObjectTagging = async function putObjectTagging(name, tag, options = {}
   };
 };
 
-}, function(modId) { var map = {"../utils/obj2xml":1681401089785,"../utils/checkObjectTag":1681401089786}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089785, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/obj2xml":1681529021962,"../utils/checkObjectTag":1681529021963}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021962, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.obj2xml = void 0;
@@ -1592,8 +1592,8 @@ function obj2xml(obj, options) {
 }
 exports.obj2xml = obj2xml;
 
-}, function(modId) { var map = {"./formatObjKey":1681401089773}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089786, function(require, module, exports) {
+}, function(modId) { var map = {"./formatObjKey":1681529021950}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021963, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.checkObjectTag = void 0;
@@ -1645,8 +1645,8 @@ function checkObjectTag(tag) {
 }
 exports.checkObjectTag = checkObjectTag;
 
-}, function(modId) { var map = {"./checkValid":1681401089787,"./isObject":1681401089763}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089787, function(require, module, exports) {
+}, function(modId) { var map = {"./checkValid":1681529021964,"./isObject":1681529021940}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021964, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.checkValid = void 0;
@@ -1663,7 +1663,7 @@ function checkValid(_value, _rules) {
 exports.checkValid = checkValid;
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089788, function(require, module, exports) {
+__DEFINE__(1681529021965, function(require, module, exports) {
 const proto = exports;
 /**
  * deleteObjectTagging
@@ -1691,7 +1691,7 @@ proto.deleteObjectTagging = async function deleteObjectTagging(
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089789, function(require, module, exports) {
+__DEFINE__(1681529021966, function(require, module, exports) {
 /* eslint-disable no-use-before-define */
 const proto = exports;
 const { isObject } = require('../utils/isObject');
@@ -1794,8 +1794,8 @@ function formatQuery(query = {}) {
 }
 
 
-}, function(modId) { var map = {"../utils/isObject":1681401089763,"../utils/isArray":1681401089790}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089790, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/isObject":1681529021940,"../utils/isArray":1681529021967}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021967, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.isArray = void 0;
@@ -1804,7 +1804,7 @@ exports.isArray = (obj) => {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089791, function(require, module, exports) {
+__DEFINE__(1681529021968, function(require, module, exports) {
 /* eslint-disable object-curly-newline */
 const utility = require('utility');
 const { obj2xml } = require('../utils/obj2xml');
@@ -1863,8 +1863,8 @@ proto.deleteMulti = async function deleteMulti(names, options = {}) {
   };
 };
 
-}, function(modId) { var map = {"../utils/obj2xml":1681401089785}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089792, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/obj2xml":1681529021962}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021969, function(require, module, exports) {
 const proto = exports;
 
 /*
@@ -1897,7 +1897,7 @@ proto.getACL = async function getACL(name, options = {}) {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089793, function(require, module, exports) {
+__DEFINE__(1681529021970, function(require, module, exports) {
 const proto = exports;
 
 /*
@@ -1927,7 +1927,7 @@ proto.putACL = async function putACL(name, acl, options) {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089794, function(require, module, exports) {
+__DEFINE__(1681529021971, function(require, module, exports) {
 const proto = exports;
 /**
  * head
@@ -1966,7 +1966,7 @@ proto.head = async function head(name, options = {}) {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089795, function(require, module, exports) {
+__DEFINE__(1681529021972, function(require, module, exports) {
 const proto = exports;
 /**
  * delete
@@ -1991,7 +1991,7 @@ proto.delete = async function _delete(name, options = {}) {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089796, function(require, module, exports) {
+__DEFINE__(1681529021973, function(require, module, exports) {
 const fs = require('fs');
 const is = require('is-type-of');
 
@@ -2058,7 +2058,7 @@ proto.get = async function get(name, file, options = {}) {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089797, function(require, module, exports) {
+__DEFINE__(1681529021974, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.postAsyncFetch = void 0;
@@ -2104,8 +2104,8 @@ async function postAsyncFetch(object, url, options = {}) {
 }
 exports.postAsyncFetch = postAsyncFetch;
 
-}, function(modId) { var map = {"../utils/obj2xml":1681401089785}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089798, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/obj2xml":1681529021962}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021975, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getAsyncFetch = void 0;
@@ -2133,8 +2133,8 @@ async function getAsyncFetch(taskId, options = {}) {
 }
 exports.getAsyncFetch = getAsyncFetch;
 
-}, function(modId) { var map = {"../utils/formatObjKey":1681401089773}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089799, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/formatObjKey":1681529021950}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021976, function(require, module, exports) {
 const urlutil = require('url');
 const { isIP } = require('../utils/isIP');
 
@@ -2164,8 +2164,8 @@ proto.generateObjectUrl = function generateObjectUrl(name, baseUrl) {
   return baseUrl + this._escape(this._objectName(name));
 };
 
-}, function(modId) { var map = {"../utils/isIP":1681401089770}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089800, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/isIP":1681529021947}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021977, function(require, module, exports) {
 const { isIP } = require('../utils/isIP');
 
 const proto = exports;
@@ -2188,8 +2188,8 @@ proto.getObjectUrl = function getObjectUrl(name, baseUrl) {
   return baseUrl + this._escape(this._objectName(name));
 };
 
-}, function(modId) { var map = {"../utils/isIP":1681401089770}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089801, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/isIP":1681529021947}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021978, function(require, module, exports) {
 const urlutil = require('url');
 const utility = require('utility');
 const copy = require('copy-to');
@@ -2249,8 +2249,8 @@ proto.signatureUrl = function signatureUrl(name, options) {
   return url.format();
 };
 
-}, function(modId) { var map = {"../../common/signUtils":1681401089761,"../utils/isIP":1681401089770,"../../common/utils/isFunction":1681401089775,"../utils/setSTSToken":1681401089772,"../utils/formatObjKey":1681401089773}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089802, function(require, module, exports) {
+}, function(modId) { var map = {"../../common/signUtils":1681529021938,"../utils/isIP":1681529021947,"../../common/utils/isFunction":1681529021952,"../utils/setSTSToken":1681529021949,"../utils/formatObjKey":1681529021950}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021979, function(require, module, exports) {
 const debug = require('debug')('ali-oss:object');
 const fs = require('fs');
 const is = require('is-type-of');
@@ -2666,8 +2666,8 @@ proto._deleteFileSafe = function (filepath) {
   });
 };
 
-}, function(modId) { var map = {"./common/callback":1681401089803,"./common/utils/isBuffer":1681401089804,"./common/utils/retry":1681401089774,"./common/utils/obj2xml":1681401089785}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089803, function(require, module, exports) {
+}, function(modId) { var map = {"./common/callback":1681529021980,"./common/utils/isBuffer":1681529021981,"./common/utils/retry":1681529021951,"./common/utils/obj2xml":1681529021962}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021980, function(require, module, exports) {
 
 
 exports.encodeCallback = function encodeCallback(reqParams, options) {
@@ -2699,7 +2699,7 @@ exports.encodeCallback = function encodeCallback(reqParams, options) {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089804, function(require, module, exports) {
+__DEFINE__(1681529021981, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.isBuffer = void 0;
@@ -2709,15 +2709,15 @@ function isBuffer(obj) {
 exports.isBuffer = isBuffer;
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089805, function(require, module, exports) {
+__DEFINE__(1681529021982, function(require, module, exports) {
 const merge = require('merge-descriptors');
 
 const proto = exports;
 
 merge(proto, require('./processObjectSave'));
 
-}, function(modId) { var map = {"./processObjectSave":1681401089806}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089806, function(require, module, exports) {
+}, function(modId) { var map = {"./processObjectSave":1681529021983}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021983, function(require, module, exports) {
 /* eslint-disable no-use-before-define */
 const { checkBucketName: _checkBucketName } = require('../utils/checkBucketName');
 const querystring = require('querystring');
@@ -2762,8 +2762,8 @@ function checkArgs(name, key) {
   }
 }
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089807, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021984, function(require, module, exports) {
 const merge = require('merge-descriptors');
 
 const proto = exports;
@@ -2798,8 +2798,8 @@ merge(proto, require('./extendBucketWorm'));
 merge(proto, require('./getBucketWorm'));
 merge(proto, require('./initiateBucketWorm'));
 
-}, function(modId) { var map = {"./getBucketRequestPayment":1681401089808,"./putBucketRequestPayment":1681401089809,"./putBucketEncryption":1681401089810,"./getBucketEncryption":1681401089811,"./deleteBucketEncryption":1681401089812,"./getBucketTags":1681401089813,"./putBucketTags":1681401089815,"./deleteBucketTags":1681401089817,"./putBucket":1681401089818,"./getBucketWebsite":1681401089819,"./putBucketWebsite":1681401089820,"./deleteBucketWebsite":1681401089821,"./getBucketLifecycle":1681401089822,"./putBucketLifecycle":1681401089823,"./deleteBucketLifecycle":1681401089826,"./getBucketPolicy":1681401089827,"./putBucketPolicy":1681401089828,"./deleteBucketPolicy":1681401089829,"./getBucketVersioning":1681401089830,"./putBucketVersioning":1681401089831,"./getBucketInventory":1681401089832,"./deleteBucketInventory":1681401089835,"./listBucketInventory":1681401089836,"./putBucketInventory":1681401089837,"./abortBucketWorm":1681401089838,"./completeBucketWorm":1681401089839,"./extendBucketWorm":1681401089840,"./getBucketWorm":1681401089841,"./initiateBucketWorm":1681401089842}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089808, function(require, module, exports) {
+}, function(modId) { var map = {"./getBucketRequestPayment":1681529021985,"./putBucketRequestPayment":1681529021986,"./putBucketEncryption":1681529021987,"./getBucketEncryption":1681529021988,"./deleteBucketEncryption":1681529021989,"./getBucketTags":1681529021990,"./putBucketTags":1681529021992,"./deleteBucketTags":1681529021994,"./putBucket":1681529021995,"./getBucketWebsite":1681529021996,"./putBucketWebsite":1681529021997,"./deleteBucketWebsite":1681529021998,"./getBucketLifecycle":1681529021999,"./putBucketLifecycle":1681529022000,"./deleteBucketLifecycle":1681529022003,"./getBucketPolicy":1681529022004,"./putBucketPolicy":1681529022005,"./deleteBucketPolicy":1681529022006,"./getBucketVersioning":1681529022007,"./putBucketVersioning":1681529022008,"./getBucketInventory":1681529022009,"./deleteBucketInventory":1681529022012,"./listBucketInventory":1681529022013,"./putBucketInventory":1681529022014,"./abortBucketWorm":1681529022015,"./completeBucketWorm":1681529022016,"./extendBucketWorm":1681529022017,"./getBucketWorm":1681529022018,"./initiateBucketWorm":1681529022019}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021985, function(require, module, exports) {
 const { checkBucketName: _checkBucketName } = require('../utils/checkBucketName');
 
 const proto = exports;
@@ -2826,8 +2826,8 @@ proto.getBucketRequestPayment = async function getBucketRequestPayment(bucketNam
   };
 };
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089809, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021986, function(require, module, exports) {
 const { checkBucketName: _checkBucketName } = require('../utils/checkBucketName');
 const { obj2xml } = require('../utils/obj2xml');
 
@@ -2878,8 +2878,8 @@ proto.putBucketRequestPayment = async function putBucketRequestPayment(
   };
 };
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765,"../utils/obj2xml":1681401089785}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089810, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942,"../utils/obj2xml":1681529021962}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021987, function(require, module, exports) {
 const proto = exports;
 // const jstoxml = require('jstoxml');
 const { checkBucketName: _checkBucketName } = require('../utils/checkBucketName');
@@ -2917,8 +2917,8 @@ proto.putBucketEncryption = async function putBucketEncryption(bucketName, optio
   };
 };
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765,"../utils/obj2xml":1681401089785}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089811, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942,"../utils/obj2xml":1681529021962}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021988, function(require, module, exports) {
 const { checkBucketName: _checkBucketName } = require('../utils/checkBucketName');
 
 const proto = exports;
@@ -2941,8 +2941,8 @@ proto.getBucketEncryption = async function getBucketEncryption(bucketName) {
   };
 };
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089812, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021989, function(require, module, exports) {
 const { checkBucketName: _checkBucketName } = require('../utils/checkBucketName');
 
 const proto = exports;
@@ -2964,8 +2964,8 @@ proto.deleteBucketEncryption = async function deleteBucketEncryption(bucketName)
   };
 };
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089813, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021990, function(require, module, exports) {
 const proto = exports;
 const { checkBucketName: _checkBucketName } = require('../utils/checkBucketName');
 const { formatTag } = require('../utils/formatTag');
@@ -2991,8 +2991,8 @@ proto.getBucketTags = async function getBucketTags(name, options = {}) {
   };
 };
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765,"../utils/formatTag":1681401089814}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089814, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942,"../utils/formatTag":1681529021991}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021991, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.formatTag = void 0;
@@ -3016,8 +3016,8 @@ function formatTag(obj) {
 }
 exports.formatTag = formatTag;
 
-}, function(modId) { var map = {"./isObject":1681401089763}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089815, function(require, module, exports) {
+}, function(modId) { var map = {"./isObject":1681529021940}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021992, function(require, module, exports) {
 const { checkBucketName: _checkBucketName } = require('../utils/checkBucketName');
 const { obj2xml } = require('../utils/obj2xml');
 const { checkBucketTag } = require('../utils/checkBucketTag');
@@ -3058,8 +3058,8 @@ proto.putBucketTags = async function putBucketTags(name, tag, options = {}) {
   };
 };
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765,"../utils/obj2xml":1681401089785,"../utils/checkBucketTag":1681401089816}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089816, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942,"../utils/obj2xml":1681529021962,"../utils/checkBucketTag":1681529021993}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021993, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.checkBucketTag = void 0;
@@ -3110,8 +3110,8 @@ exports.checkBucketTag = (tag) => {
     });
 };
 
-}, function(modId) { var map = {"./checkValid":1681401089787,"./isObject":1681401089763}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089817, function(require, module, exports) {
+}, function(modId) { var map = {"./checkValid":1681529021964,"./isObject":1681529021940}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021994, function(require, module, exports) {
 const { checkBucketName: _checkBucketName } = require('../utils/checkBucketName');
 
 const proto = exports;
@@ -3134,8 +3134,8 @@ proto.deleteBucketTags = async function deleteBucketTags(name, options = {}) {
   };
 };
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089818, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021995, function(require, module, exports) {
 const proto = exports;
 const { checkBucketName: _checkBucketName } = require('../utils/checkBucketName');
 const { obj2xml } = require('../utils/obj2xml');
@@ -3168,8 +3168,8 @@ proto.putBucket = async function putBucket(name, options = {}) {
   };
 };
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765,"../utils/obj2xml":1681401089785}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089819, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942,"../utils/obj2xml":1681529021962}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021996, function(require, module, exports) {
 const { checkBucketName: _checkBucketName } = require('../utils/checkBucketName');
 const { isObject } = require('../utils/isObject');
 
@@ -3199,8 +3199,8 @@ proto.getBucketWebsite = async function getBucketWebsite(name, options) {
   };
 };
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765,"../utils/isObject":1681401089763}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089820, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942,"../utils/isObject":1681529021940}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021997, function(require, module, exports) {
 const { checkBucketName: _checkBucketName } = require('../utils/checkBucketName');
 const { obj2xml } = require('../utils/obj2xml');
 const { isArray } = require('../utils/isArray');
@@ -3252,8 +3252,8 @@ proto.putBucketWebsite = async function putBucketWebsite(name, config = {}, opti
   };
 };
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765,"../utils/obj2xml":1681401089785,"../utils/isArray":1681401089790}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089821, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942,"../utils/obj2xml":1681529021962,"../utils/isArray":1681529021967}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021998, function(require, module, exports) {
 const { checkBucketName: _checkBucketName } = require('../utils/checkBucketName');
 
 const proto = exports;
@@ -3268,8 +3268,8 @@ proto.deleteBucketWebsite = async function deleteBucketWebsite(name, options) {
   };
 };
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089822, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529021999, function(require, module, exports) {
 const { checkBucketName: _checkBucketName } = require('../utils/checkBucketName');
 const { isArray } = require('../utils/isArray');
 const { formatObjKey } = require('../utils/formatObjKey');
@@ -3305,8 +3305,8 @@ proto.getBucketLifecycle = async function getBucketLifecycle(name, options) {
 };
 
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765,"../utils/isArray":1681401089790,"../utils/formatObjKey":1681401089773}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089823, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942,"../utils/isArray":1681529021967,"../utils/formatObjKey":1681529021950}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022000, function(require, module, exports) {
 /* eslint-disable no-use-before-define */
 const { checkBucketName: _checkBucketName } = require('../utils/checkBucketName');
 const { isArray } = require('../utils/isArray');
@@ -3434,8 +3434,8 @@ function checkRule(rule) {
 }
 
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765,"../utils/isArray":1681401089790,"../utils/deepCopy":1681401089824,"../utils/isObject":1681401089763,"../utils/obj2xml":1681401089785,"../utils/checkObjectTag":1681401089786,"../utils/getStrBytesCount":1681401089825}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089824, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942,"../utils/isArray":1681529021967,"../utils/deepCopy":1681529022001,"../utils/isObject":1681529021940,"../utils/obj2xml":1681529021962,"../utils/checkObjectTag":1681529021963,"../utils/getStrBytesCount":1681529022002}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022001, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.deepCopyWith = exports.deepCopy = void 0;
@@ -3478,8 +3478,8 @@ exports.deepCopyWith = (obj, customizer) => {
     }
 };
 
-}, function(modId) { var map = {"./isBuffer":1681401089804}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089825, function(require, module, exports) {
+}, function(modId) { var map = {"./isBuffer":1681529021981}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022002, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getStrBytesCount = void 0;
@@ -3499,7 +3499,7 @@ function getStrBytesCount(str) {
 exports.getStrBytesCount = getStrBytesCount;
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089826, function(require, module, exports) {
+__DEFINE__(1681529022003, function(require, module, exports) {
 const { checkBucketName: _checkBucketName } = require('../utils/checkBucketName');
 
 const proto = exports;
@@ -3514,8 +3514,8 @@ proto.deleteBucketLifecycle = async function deleteBucketLifecycle(name, options
   };
 };
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089827, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022004, function(require, module, exports) {
 const { checkBucketName: _checkBucketName } = require('../utils/checkBucketName');
 
 const proto = exports;
@@ -3545,8 +3545,8 @@ proto.getBucketPolicy = async function getBucketPolicy(bucketName, options = {})
   };
 };
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089828, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022005, function(require, module, exports) {
 const { checkBucketName: _checkBucketName } = require('../utils/checkBucketName');
 const { policy2Str } = require('../utils/policy2Str');
 const { isObject } = require('../utils/isObject');
@@ -3575,8 +3575,8 @@ proto.putBucketPolicy = async function putBucketPolicy(bucketName, policy, optio
   };
 };
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765,"../utils/policy2Str":1681401089782,"../utils/isObject":1681401089763}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089829, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942,"../utils/policy2Str":1681529021959,"../utils/isObject":1681529021940}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022006, function(require, module, exports) {
 const { checkBucketName: _checkBucketName } = require('../utils/checkBucketName');
 
 const proto = exports;
@@ -3599,8 +3599,8 @@ proto.deleteBucketPolicy = async function deleteBucketPolicy(bucketName, options
   };
 };
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089830, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022007, function(require, module, exports) {
 const { checkBucketName: _checkBucketName } = require('../utils/checkBucketName');
 
 const proto = exports;
@@ -3624,8 +3624,8 @@ proto.getBucketVersioning = async function getBucketVersioning(bucketName, optio
   };
 };
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089831, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022008, function(require, module, exports) {
 const { checkBucketName: _checkBucketName } = require('../utils/checkBucketName');
 const { obj2xml } = require('../utils/obj2xml');
 
@@ -3662,8 +3662,8 @@ proto.putBucketVersioning = async function putBucketVersioning(name, status, opt
   };
 };
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765,"../utils/obj2xml":1681401089785}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089832, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942,"../utils/obj2xml":1681529021962}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022009, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getBucketInventory = void 0;
@@ -3690,8 +3690,8 @@ async function getBucketInventory(bucketName, inventoryId, options = {}) {
 }
 exports.getBucketInventory = getBucketInventory;
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765,"../utils/formatInventoryConfig":1681401089833}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089833, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942,"../utils/formatInventoryConfig":1681529022010}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022010, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.formatInventoryConfig = void 0;
@@ -3738,8 +3738,8 @@ function formatFn(_) {
     return _;
 }
 
-}, function(modId) { var map = {"../utils/dataFix":1681401089834,"../utils/isObject":1681401089763,"../utils/isArray":1681401089790,"../utils/formatObjKey":1681401089773}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089834, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/dataFix":1681529022011,"../utils/isObject":1681529021940,"../utils/isArray":1681529021967,"../utils/formatObjKey":1681529021950}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022011, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.dataFix = void 0;
@@ -3806,8 +3806,8 @@ function fixLowerFirst(o, lowerFirst) {
     }
 }
 
-}, function(modId) { var map = {"./isObject":1681401089763}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089835, function(require, module, exports) {
+}, function(modId) { var map = {"./isObject":1681529021940}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022012, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.deleteBucketInventory = void 0;
@@ -3831,8 +3831,8 @@ async function deleteBucketInventory(bucketName, inventoryId, options = {}) {
 }
 exports.deleteBucketInventory = deleteBucketInventory;
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089836, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022013, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.listBucketInventory = void 0;
@@ -3863,8 +3863,8 @@ async function listBucketInventory(bucketName, options = {}) {
 }
 exports.listBucketInventory = listBucketInventory;
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765,"../utils/formatInventoryConfig":1681401089833}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089837, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942,"../utils/formatInventoryConfig":1681529022010}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022014, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.putBucketInventory = void 0;
@@ -3924,8 +3924,8 @@ async function putBucketInventory(bucketName, inventory, options = {}) {
 }
 exports.putBucketInventory = putBucketInventory;
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765,"../utils/obj2xml":1681401089785}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089838, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942,"../utils/obj2xml":1681529021962}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022015, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.abortBucketWorm = void 0;
@@ -3941,8 +3941,8 @@ async function abortBucketWorm(name, options) {
 }
 exports.abortBucketWorm = abortBucketWorm;
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089839, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022016, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.completeBucketWorm = void 0;
@@ -3958,8 +3958,8 @@ async function completeBucketWorm(name, wormId, options) {
 }
 exports.completeBucketWorm = completeBucketWorm;
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089840, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022017, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.extendBucketWorm = void 0;
@@ -3984,8 +3984,8 @@ async function extendBucketWorm(name, wormId, days, options) {
 }
 exports.extendBucketWorm = extendBucketWorm;
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765,"../utils/obj2xml":1681401089785}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089841, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942,"../utils/obj2xml":1681529021962}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022018, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getBucketWorm = void 0;
@@ -4007,8 +4007,8 @@ async function getBucketWorm(name, options) {
 }
 exports.getBucketWorm = getBucketWorm;
 
-}, function(modId) { var map = {"../utils/checkBucketName":1681401089765,"../utils/dataFix":1681401089834}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089842, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/checkBucketName":1681529021942,"../utils/dataFix":1681529022011}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022019, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.initiateBucketWorm = void 0;
@@ -4034,8 +4034,8 @@ async function initiateBucketWorm(name, days, options) {
 }
 exports.initiateBucketWorm = initiateBucketWorm;
 
-}, function(modId) { var map = {"../utils/obj2xml":1681401089785,"../utils/checkBucketName":1681401089765}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089843, function(require, module, exports) {
+}, function(modId) { var map = {"../utils/obj2xml":1681529021962,"../utils/checkBucketName":1681529021942}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022020, function(require, module, exports) {
 
 
 const assert = require('assert');
@@ -4382,8 +4382,8 @@ proto._bucketRequestParams = function _bucketRequestParams(method, bucket, subre
   };
 };
 
-}, function(modId) { var map = {"./common/utils/isArray":1681401089790,"../lib/common/utils/checkBucketName":1681401089765,"../lib/common/utils/formatTag":1681401089814}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089844, function(require, module, exports) {
+}, function(modId) { var map = {"./common/utils/isArray":1681529021967,"../lib/common/utils/checkBucketName":1681529021942,"../lib/common/utils/formatTag":1681529021991}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022021, function(require, module, exports) {
 const fs = require('fs');
 const is = require('is-type-of');
 const util = require('util');
@@ -4764,8 +4764,8 @@ proto._divideParts = function _divideParts(fileSize, partSize) {
   return partOffs;
 };
 
-}, function(modId) { var map = {"./common/utils/isFile":1681401089845,"./common/utils/isArray":1681401089790,"./common/utils/isBuffer":1681401089804,"./common/utils/retry":1681401089774}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089845, function(require, module, exports) {
+}, function(modId) { var map = {"./common/utils/isFile":1681529022022,"./common/utils/isArray":1681529021967,"./common/utils/isBuffer":1681529021981,"./common/utils/retry":1681529021951}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022022, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.isFile = void 0;
@@ -4774,7 +4774,7 @@ exports.isFile = (obj) => {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089846, function(require, module, exports) {
+__DEFINE__(1681529022023, function(require, module, exports) {
 /**
  * Copyright(c) ali-sdk and other contributors.
  * MIT Licensed
@@ -5070,7 +5070,7 @@ proto.getRtmpUrl = function (channelId, options) {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089847, function(require, module, exports) {
+__DEFINE__(1681529022024, function(require, module, exports) {
 /* eslint-disable no-async-promise-executor */
 
 const debug = require('debug')('ali-oss:multipart-copy');
@@ -5316,7 +5316,7 @@ proto._getObjectMeta = async function _getObjectMeta(bucket, name, options) {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089848, function(require, module, exports) {
+__DEFINE__(1681529022025, function(require, module, exports) {
 const { isArray } = require('./utils/isArray');
 
 const proto = exports;
@@ -5493,8 +5493,8 @@ proto._makeAbortEvent = function _makeAbortEvent() {
   return abortEvent;
 };
 
-}, function(modId) { var map = {"./utils/isArray":1681401089790}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089849, function(require, module, exports) {
+}, function(modId) { var map = {"./utils/isArray":1681529021967}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022026, function(require, module, exports) {
 const copy = require('copy-to');
 const callback = require('./callback');
 const { deepCopyWith } = require('./utils/deepCopy');
@@ -5760,8 +5760,8 @@ proto._uploadPart = async function _uploadPart(name, uploadId, partNo, data, opt
   };
 };
 
-}, function(modId) { var map = {"./callback":1681401089803,"./utils/deepCopy":1681401089824,"./utils/isBuffer":1681401089804}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089850, function(require, module, exports) {
+}, function(modId) { var map = {"./callback":1681529021980,"./utils/deepCopy":1681529022001,"./utils/isBuffer":1681529021981}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022027, function(require, module, exports) {
 
 
 /* istanbul ignore next */
@@ -5913,7 +5913,7 @@ module.exports = function (OssClient) {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089851, function(require, module, exports) {
+__DEFINE__(1681529022028, function(require, module, exports) {
 
 const Base = require('sdk-base');
 const util = require('util');
@@ -6157,7 +6157,7 @@ module.exports = function (OssClient) {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089852, function(require, module, exports) {
+__DEFINE__(1681529022029, function(require, module, exports) {
 
 const debug = require('debug')('ali-oss:sts');
 const crypto = require('crypto');
@@ -6323,7 +6323,7 @@ proto._escape = function _escape(str) {
 };
 
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-return __REQUIRE__(1681401089759);
+return __REQUIRE__(1681529021936);
 })()
 //miniprogram-npm-outsideDeps=["debug","stream-wormhole","xml2js","agentkeepalive","merge-descriptors","platform","utility","urllib","bowser","crypto","is-type-of","humanize-ms","url","mime","dateformat","copy-to","path","fs","stream","pump","querystring","js-base64","assert","util","jstoxml","sdk-base","get-ready","address"]
 //# sourceMappingURL=index.js.map

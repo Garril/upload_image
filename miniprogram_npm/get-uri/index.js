@@ -4,7 +4,7 @@ var __DEFINE__ = function(modId, func, req) { var m = { exports: {}, _tempexport
 var __REQUIRE__ = function(modId, source) { if(!__MODS__[modId]) return require(source); if(!__MODS__[modId].status) { var m = __MODS__[modId].m; m._exports = m._tempexports; var desp = Object.getOwnPropertyDescriptor(m, "exports"); if (desp && desp.configurable) Object.defineProperty(m, "exports", { set: function (val) { if(typeof val === "object" && val !== m._exports) { m._exports.__proto__ = val.__proto__; Object.keys(val).forEach(function (k) { m._exports[k] = val[k]; }); } m._tempexports = val }, get: function () { return m._tempexports; } }); __MODS__[modId].status = 1; __MODS__[modId].func(__MODS__[modId].req, m, m.exports); } return __MODS__[modId].m.exports; };
 var __REQUIRE_WILDCARD__ = function(obj) { if(obj && obj.__esModule) { return obj; } else { var newObj = {}; if(obj != null) { for(var k in obj) { if (Object.prototype.hasOwnProperty.call(obj, k)) newObj[k] = obj[k]; } } newObj.default = obj; return newObj; } };
 var __REQUIRE_DEFAULT__ = function(obj) { return obj && obj.__esModule ? obj.default : obj; };
-__DEFINE__(1681401089970, function(require, module, exports) {
+__DEFINE__(1681529022147, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -60,8 +60,8 @@ function getUri(uri, opts, fn) {
 })(getUri || (getUri = {}));
 module.exports = getUri;
 //# sourceMappingURL=index.js.map
-}, function(modId) {var map = {"./data":1681401089971,"./file":1681401089973,"./ftp":1681401089975,"./http":1681401089976,"./https":1681401089977}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089971, function(require, module, exports) {
+}, function(modId) {var map = {"./data":1681529022148,"./file":1681529022150,"./ftp":1681529022152,"./http":1681529022153,"./https":1681529022154}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022148, function(require, module, exports) {
 
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -115,8 +115,8 @@ function get({ href: uri }, { cache }) {
 }
 exports.default = get;
 //# sourceMappingURL=data.js.map
-}, function(modId) { var map = {"./notmodified":1681401089972}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089972, function(require, module, exports) {
+}, function(modId) { var map = {"./notmodified":1681529022149}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022149, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -136,7 +136,7 @@ class NotModifiedError extends Error {
 exports.default = NotModifiedError;
 //# sourceMappingURL=notmodified.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089973, function(require, module, exports) {
+__DEFINE__(1681529022150, function(require, module, exports) {
 
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -200,8 +200,8 @@ function isNotModified(prev, curr) {
     return +prev.mtime === +curr.mtime;
 }
 //# sourceMappingURL=file.js.map
-}, function(modId) { var map = {"./notfound":1681401089974,"./notmodified":1681401089972}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089974, function(require, module, exports) {
+}, function(modId) { var map = {"./notfound":1681529022151,"./notmodified":1681529022149}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022151, function(require, module, exports) {
 
 /**
  * Error subclass to use when the source does not exist at the specified endpoint.
@@ -220,7 +220,7 @@ class NotFoundError extends Error {
 exports.default = NotFoundError;
 //# sourceMappingURL=notfound.js.map
 }, function(modId) { var map = {}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089975, function(require, module, exports) {
+__DEFINE__(1681529022152, function(require, module, exports) {
 
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -339,8 +339,8 @@ function get(parsed, opts) {
 }
 exports.default = get;
 //# sourceMappingURL=ftp.js.map
-}, function(modId) { var map = {"ftp":1681401089975,"./notfound":1681401089974,"./notmodified":1681401089972}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089976, function(require, module, exports) {
+}, function(modId) { var map = {"ftp":1681529022152,"./notfound":1681529022151,"./notmodified":1681529022149}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022153, function(require, module, exports) {
 
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -543,8 +543,8 @@ function getCache(parsed, cache) {
     return null;
 }
 //# sourceMappingURL=http.js.map
-}, function(modId) { var map = {"http":1681401089976,"https":1681401089977,"./http-error":1681401089978,"./notfound":1681401089974,"./notmodified":1681401089972}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089977, function(require, module, exports) {
+}, function(modId) { var map = {"http":1681529022153,"https":1681529022154,"./http-error":1681529022155,"./notfound":1681529022151,"./notmodified":1681529022149}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022154, function(require, module, exports) {
 
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -560,8 +560,8 @@ function get(parsed, opts) {
 }
 exports.default = get;
 //# sourceMappingURL=https.js.map
-}, function(modId) { var map = {"https":1681401089977,"./http":1681401089976}; return __REQUIRE__(map[modId], modId); })
-__DEFINE__(1681401089978, function(require, module, exports) {
+}, function(modId) { var map = {"https":1681529022154,"./http":1681529022153}; return __REQUIRE__(map[modId], modId); })
+__DEFINE__(1681529022155, function(require, module, exports) {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 const http_1 = require("http");
@@ -580,8 +580,8 @@ class HTTPError extends Error {
 }
 exports.default = HTTPError;
 //# sourceMappingURL=http-error.js.map
-}, function(modId) { var map = {"http":1681401089976}; return __REQUIRE__(map[modId], modId); })
-return __REQUIRE__(1681401089970);
+}, function(modId) { var map = {"http":1681529022153}; return __REQUIRE__(map[modId], modId); })
+return __REQUIRE__(1681529022147);
 })()
 //miniprogram-npm-outsideDeps=["debug","url","stream","crypto","data-uri-to-buffer","fs","fs-extra","file-uri-to-path","@tootallnate/once","path"]
 //# sourceMappingURL=index.js.map

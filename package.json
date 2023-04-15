@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "ali-oss": "^6.17.1",
-    "vant-weapp": "^0.5.29"
+    "ali-oss": "^6.17.1"
   }
 }
